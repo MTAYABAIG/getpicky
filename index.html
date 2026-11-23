@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Picky — Measure, pick, preview and capture any web page</title>
+  <meta name="description" content="Picky is a browser extension for Edge and Chrome. Measure spacing, pick colors, preview your page on about 100 devices, and capture screenshots and video, without leaving the page." />
+  <link rel="icon" type="image/png" href="assets/icon-32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:title" content="Picky — Measure, pick, preview and capture any web page" />
+  <meta property="og:description" content="One toolbar for the checks you do on every page: spacing, color, devices, screenshots and video." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="assets/icon-128.png" alt="" width="28" height="28" />Picky</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#watch" class="hide-sm">Watch</a>
+        <a href="#tools" class="hide-sm">Tools</a>
+        <a href="#features" class="hide-sm">What you get</a>
+        <a href="#devices" class="hide-sm">Devices</a>
+        <a href="#plans" class="hide-sm">Free and Pro</a>
+        <a href="support.html">Support</a>
+        <a class="btn btn-primary" href="#install">Add to browser</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <h1>Check every pixel of a page without leaving it.</h1>
+          <p class="lede">Picky is a toolbar for the checks you do on every page: the gap between two elements, the exact color, how it looks on a phone, a screenshot to send. One extension instead of four.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#install" data-store="edge">Add to Edge</a>
+            <a class="btn btn-quiet" href="#install" data-store="chrome">Add to Chrome</a>
+          </div>
+          <p class="hero-note">Open it on any page with <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>. Free to use.</p>
+        </div>
+
+        <div class="stage">
+          <div class="frame">
+            <div class="frame-bar">
+              <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="frame-url">orbit.shop/lamp</span>
+              <span class="frame-tag">Picky is on</span>
+            </div>
+            <div class="frame-body">
+              <div class="demo-page" data-stage aria-label="Interactive demo. Point at the product card to inspect it.">
+                <div class="lamp" data-inspect data-card tabindex="0">
+                  <span class="stock" data-inspect tabindex="0">In stock</span>
+                  <h2 data-inspect tabindex="0">Orbit desk lamp</h2>
+                  <p class="blurb" data-inspect tabindex="0">Warm light, one dial, a base that stays put.</p>
+                  <div class="row">
+                    <span class="price" data-inspect tabindex="0">$84</span>
+                    <button class="buy" type="button" data-inspect>Add to cart</button>
+                  </div>
+                </div>
+                <svg class="guides" data-guides aria-hidden="true"></svg>
+                <div class="tb" aria-hidden="true"><span class="on">M</span><span>R</span><span>C</span><span>S</span><span>V</span></div>
+                <svg class="ghost" data-ghost width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 2l15 7.2-6.4 2 -2.2 6.6z" fill="#15171c" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <div class="hint-pill" aria-hidden="true">Point at an element to inspect it</div>
+              </div>
+              <div class="readout" data-readout aria-live="off">
+                <p class="el" data-out="el">button</p>
+                <dl>
+                  <div class="r"><dt>Size</dt><dd data-out="size"></dd></div>
+                  <div class="r"><dt>Padding</dt><dd data-out="pad"></dd></div>
+                  <div class="r"><dt>Font</dt><dd data-out="font"></dd></div>
+                  <div class="r"><dt>Text</dt><dd data-out="color"></dd></div>
+                  <div class="r"><dt>Contrast</dt><dd data-out="contrast"></dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <p class="demo-hint">This is a live demo. Point at the card, the title or the button, and the gaps and values come from the page itself.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="watch">
+      <div class="wrap">
+        <div class="band-head">
+          <h2>See it on a real page.</h2>
+          <p class="lead">Recorded from the extension itself. Start with the full tour, or jump to one tool.</p>
+        </div>
+        <div class="watch">
+        <div class="player">
+          <video controls preload="none" playsinline poster="assets/video/tour-poster.webp" data-player>
+            <source src="assets/video/picky-tour.mp4" type="video/mp4" />
+            Your browser can't play this video. <a href="assets/video/picky-tour.mp4">Download it instead</a>.
+          </video>
+        </div>
+        <div class="cuts" role="group" aria-label="Choose a video">
+          <button type="button" class="cut" aria-pressed="true" data-src="assets/video/picky-tour.mp4" data-poster="assets/video/tour-poster.webp"><img src="assets/video/tour-poster.webp" alt="" width="320" height="180" loading="lazy" /><span class="cut-t"><b>Full tour</b><span>1:05</span></span></button>
+          <button type="button" class="cut" aria-pressed="false" data-src="assets/video/picky-measure.mp4" data-poster="assets/video/measure-poster.webp"><img src="assets/video/measure-poster.webp" alt="" width="320" height="180" loading="lazy" /><span class="cut-t"><b>Measure</b><span>0:31</span></span></button>
+          <button type="button" class="cut" aria-pressed="false" data-src="assets/video/picky-responsive.mp4" data-poster="assets/video/responsive-poster.webp"><img src="assets/video/responsive-poster.webp" alt="" width="320" height="180" loading="lazy" /><span class="cut-t"><b>Responsive</b><span>0:31</span></span></button>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="tools">
+      <div class="wrap">
+        <div class="band-head">
+          <h2>Five tools. One key each.</h2>
+          <p class="lead">Open Picky with <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>, then press the key for the tool you want.</p>
+        </div>
+        <div class="stagebox">
+        <div class="shots" data-shots>
+          <img data-shot="measure" class="on" src="assets/shots/measure.webp" width="1400" height="716" alt="Measure: gaps in pixels drawn between elements on a page, with a panel for custom CSS." />
+          <img data-shot="responsive" src="assets/shots/responsive.webp" width="1400" height="716" alt="Responsive: a phone, a tablet and a laptop showing the same page side by side, with the device list on the right." />
+          <img data-shot="color" src="assets/shots/color.webp" width="1400" height="716" alt="Color Picker: a color panel open on a page, with a harmony palette and swatches." />
+          <img data-shot="screenshot" src="assets/shots/screenshot.webp" width="1400" height="716" alt="Screenshot: a full-page capture, with the capture saved to the tray." />
+          <img data-shot="video" src="assets/shots/video.webp" width="1400" height="716" alt="Video: a recording bar with a running clock above a phone preview." />
+        </div>
+        <div class="keycaps" data-tools role="group" aria-label="Tools">
+          <button type="button" class="keycap" aria-pressed="true" data-tool="measure" data-desc="Click two elements to get the exact pixel gap between them, drawn with scale marks. Point at one to read its size, typography and box model, and change values live to try an idea."><kbd>M</kbd><b>Measure</b></button>
+          <button type="button" class="keycap" aria-pressed="false" data-tool="responsive" data-desc="See your page on about 100 phones, tablets, laptops and desktops, in realistic frames at their real viewport sizes. Add your own sizes. Record a clip of the preview."><kbd>R</kbd><b>Responsive</b></button>
+          <button type="button" class="keycap" aria-pressed="false" data-tool="color" data-desc="Pick any color on the page and copy it as HEX, RGB or HSL. See the page's palette, and check text against its background for WCAG AA and AAA."><kbd>C</kbd><b>Color Picker</b></button>
+          <button type="button" class="keycap" aria-pressed="false" data-tool="screenshot" data-desc="Capture, annotate and crop in the built-in editor. Copy the image, or share a link that anyone can open and that expires after 30 days."><kbd>S</kbd><b>Screenshot</b></button>
+          <button type="button" class="keycap" aria-pressed="false" data-tool="video" data-desc="Record the tab, an area or the whole screen, with tab and microphone audio. Clips are 30 seconds on the free plan and 5 minutes on Pro."><kbd>V</kbd><b>Video</b></button>
+        </div>
+        </div>
+        <p class="keycap-desc" data-tool-desc>Click two elements to get the exact pixel gap between them, drawn with scale marks. Point at one to read its size, typography and box model, and change values live to try an idea.</p>
+      </div>
+    </section>
+
+    <section class="band" id="features">
+      <div class="wrap">
+        <div class="band-head">
+          <h2>What you get when you select something.</h2>
+          <p class="lead">Point at any element and Picky reads it for you. Here is each part, one at a time.</p>
+        </div>
+        <div class="feat" data-features>
+          <div class="feat-stage">
+            <div class="frame" data-stage2 data-step="box">
+              <div class="frame-bar"><span class="frame-url">orbit.shop/lamp</span><span class="frame-tag">Sample page</span></div>
+              <div class="d2-body">
+                <div class="d2-page">
+                  <div class="s-card">
+                    <span class="s-stock">In stock</span>
+                    <h3 class="s-title">Orbit desk lamp</h3>
+                    <p class="s-blurb">Warm light, one dial, a base that stays put.</p>
+                    <div class="s-row"><span class="s-price">$84</span><button class="s-buy" type="button" tabindex="-1">Add to cart</button></div>
+                  </div>
+                </div>
+                <div class="readout d2-panel">
+                  <div data-pane="box">
+                    <p class="el">button.buy</p>
+                    <dl>
+                      <div class="r" style="--i:0"><dt>Size</dt><dd>120 × 48</dd></div>
+                      <div class="r" style="--i:1"><dt>Padding</dt><dd><i class="swatch" style="background:rgba(32,119,84,.55)"></i>12 20</dd></div>
+                      <div class="r" style="--i:2"><dt>Content</dt><dd><i class="swatch" style="background:rgba(60,110,220,.55)"></i>80 × 24</dd></div>
+                      <div class="r" style="--i:3"><dt>Font</dt><dd>15 / 600</dd></div>
+                      <div class="r" style="--i:4"><dt>Line height</dt><dd>24</dd></div>
+                    </dl>
+                  </div>
+                  <div data-pane="vars" hidden>
+                    <p class="el">button.buy</p>
+                    <dl>
+                      <div class="r v" style="--i:0"><dt>background</dt><dd><span class="tok">var(--brand)</span><span class="to"><i class="swatch" style="background:#b02346"></i>#b02346</span></dd></div>
+                      <div class="r v" style="--i:1"><dt>color</dt><dd><span class="tok">var(--on-brand)</span><span class="to"><i class="swatch" style="background:#fff"></i>#ffffff</span></dd></div>
+                      <div class="r v" style="--i:2"><dt>radius</dt><dd><span class="tok">var(--radius-md)</span><span class="to">10px</span></dd></div>
+                    </dl>
+                    <p class="note" style="--i:3">Defined in <b>tokens.css</b>, line 12</p>
+                  </div>
+                  <div data-pane="contrast" hidden>
+                    <p class="el">p.blurb</p>
+                    <dl>
+                      <div class="r" style="--i:0"><dt>Title</dt><dd data-ratio="title"></dd></div>
+                      <div class="r" style="--i:1"><dt>Button</dt><dd data-ratio="buy"></dd></div>
+                      <div class="r" style="--i:2"><dt>Blurb</dt><dd data-ratio="blurb"></dd></div>
+                    </dl>
+                    <p class="note" style="--i:3">The blurb fails AA at 15px. Darken it to pass.</p>
+                  </div>
+                  <div data-pane="states" hidden>
+                    <p class="el">button.buy</p>
+                    <div class="tabs"><span class="t1">:hover</span><span class="t2">:focus</span><span class="t3">:active</span></div>
+                    <div class="diffs">
+                      <dl class="diff d1"><div class="r"><dt>background</dt><dd><s>#b02346</s> #8f1c39</dd></div></dl>
+                      <dl class="diff d2"><div class="r"><dt>box-shadow</dt><dd><s>none</s> 0 0 0 5px</dd></div></dl>
+                      <dl class="diff d3"><div class="r"><dt>transform</dt><dd><s>none</s> scale(.97)</dd></div><div class="r"><dt>background</dt><dd><s>#b02346</s> #8f1c39</dd></div></dl>
+                    </div>
+                    <p class="note">Each state is previewed on the live page.</p>
+                  </div>
+                  <div data-pane="edit" hidden>
+                    <p class="el">button.buy</p>
+                    <dl>
+                      <div class="r"><dt>Padding Y</dt><dd><span class="scrub"><i>‹</i><b>12</b><i>›</i></span></dd></div>
+                      <div class="r"><dt>Padding X</dt><dd><span class="scrub on"><i>‹</i><b data-px>20</b><i>›</i></span></dd></div>
+                      <div class="r"><dt>Size</dt><dd data-size>120 × 48</dd></div>
+                    </dl>
+                    <p class="note">The button changes as the number moves. Reload the page and it is back to normal.</p>
+                  </div>
+                  <div data-pane="code" hidden>
+                    <p class="el">button.buy</p>
+                    <div class="tabs"><span class="on">CSS</span><span>Tailwind <u>Pro</u></span><span>SVG <u>Pro</u></span><span>JSON <u>Pro</u></span></div>
+                    <pre class="code"><span style="--i:0">.buy {</span><span style="--i:1">  padding: 12px 20px;</span><span style="--i:2">  border-radius: 10px;</span><span style="--i:3">  background: #b02346;</span><span style="--i:4">  color: #ffffff;</span><span style="--i:5">  font-size: 15px;</span><span style="--i:6">  font-weight: 600;</span><span style="--i:7">}</span></pre>
+                    <p class="copied">Copied</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="demo-hint">An illustration on the same sample page, not a screen recording.</p>
+          </div>
+          <div>
+            <div class="picks-head"><span data-count>1 of 6</span><button type="button" class="pause" data-pause aria-pressed="false">Pause</button></div>
+            <ul class="picks">
+            <li><button type="button" class="pick" aria-pressed="false" data-pick="box" style="--dur:5s">
+              <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="16" rx="2" stroke-dasharray="2.4 2.2"/><rect x="6" y="7.5" width="12" height="9" rx="1.2"/><rect x="9.6" y="10.6" width="4.8" height="2.8" rx="0.6" fill="var(--crimson)" stroke="none"/></svg></span>
+              <span class="txt"><b>Box model and type</b><span class="more"><span>Margin, padding, border and radius, plus font, size, weight and line height, grouped so you can scan them.</span></span></span>
+              <i class="bar" aria-hidden="true"></i>
+            </button></li>
+            <li><button type="button" class="pick" aria-pressed="false" data-pick="vars" style="--dur:5s">
+              <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3.5C7 3.5 6.5 4.5 6.5 6V9.5C6.5 10.8 5.8 11.6 4.5 12C5.8 12.4 6.5 13.2 6.5 14.5V18C6.5 19.5 7 20.5 9 20.5"/><path d="M15 3.5C17 3.5 17.5 4.5 17.5 6V9.5C17.5 10.8 18.2 11.6 19.5 12C18.2 12.4 17.5 13.2 17.5 14.5V18C17.5 19.5 17 20.5 15 20.5"/><path d="M9.6 12h2M12.4 12h2" stroke="var(--crimson)" stroke-width="2"/></svg></span>
+              <span class="txt"><b>CSS variables, resolved</b><span class="more"><span>Every <code>var(--token)</code> shown as its real value, with the stylesheet it came from.</span></span></span>
+              <i class="bar" aria-hidden="true"></i>
+            </button></li>
+            <li><button type="button" class="pick" aria-pressed="false" data-pick="contrast" style="--dur:5.5s">
+              <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="var(--crimson)" stroke="none"/></svg></span>
+              <span class="txt"><b>Contrast, honestly</b><span class="more"><span>AA and AAA pass or fail against the effective background. Over a gradient, Picky says so instead of guessing.</span></span></span>
+              <i class="bar" aria-hidden="true"></i>
+            </button></li>
+            <li><button type="button" class="pick" aria-pressed="false" data-pick="states" style="--dur:6.5s">
+              <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="14" height="11" rx="2" stroke-dasharray="2.4 2.2"/><path d="M12 10.5V21l2.7-2.5 2 3.6 1.9-1-2-3.5 3.6-.2z" fill="var(--crimson)" stroke="var(--crimson)" stroke-width="1"/></svg></span>
+              <span class="txt"><b>Hover, focus and active</b><span class="more"><span>Preview a state on the live page and see what changed. Hover is free.</span></span></span>
+              <i class="bar" aria-hidden="true"></i>
+            </button></li>
+            <li><button type="button" class="pick" aria-pressed="false" data-pick="edit" style="--dur:5.5s">
+              <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="7" width="19" height="10" rx="2.5"/><path d="M7.6 10.4 5.6 12l2 1.6M16.4 10.4l2 1.6-2 1.6"/><path d="M10 12h4" stroke="var(--crimson)" stroke-width="2"/></svg></span>
+              <span class="txt"><b>Live editing</b><span class="more"><span>Drag a number, type a value or open a color picker. The page updates instantly and goes back to normal on reload.</span></span></span>
+              <i class="bar" aria-hidden="true"></i>
+            </button></li>
+            <li><button type="button" class="pick" aria-pressed="false" data-pick="code" style="--dur:6s">
+              <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 7.5 4 12l4.5 4.5M15.5 7.5 20 12l-4.5 4.5"/><path d="M13.4 5.5l-2.8 13" stroke="var(--crimson)" stroke-width="2"/></svg></span>
+              <span class="txt"><b>Copy as code</b><span class="more"><span>Copy the element as CSS. Tailwind, SVG and JSON are part of Pro.</span></span></span>
+              <i class="bar" aria-hidden="true"></i>
+            </button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band bench" id="devices">
+      <div class="wrap">
+        <div class="bench-panel">
+        <div class="band-head">
+          <h2>Devices drawn at their real sizes.</h2>
+          <p class="lead">Responsive preview renders your page at each device's true viewport, so a phone looks like a phone next to a laptop.</p>
+        </div>
+        <div class="scale" role="img" aria-label="Four devices drawn to the same scale: iPhone SE, iPhone 16, iPad mini and a 1440 by 900 laptop.">
+          <div class="dev" style="--w:375;--h:667;--r:12"><div class="shape"><div class="wf"><i class="nav"></i><i class="h"></i><i class="l1"></i><i class="l2"></i><i class="btn"></i><i class="cards"><b></b><b></b><b></b></i></div></div><div><b>iPhone SE</b><span>375 × 667</span></div></div>
+          <div class="dev" style="--w:393;--h:852;--r:16"><div class="shape"><div class="wf"><i class="nav"></i><i class="h"></i><i class="l1"></i><i class="l2"></i><i class="btn"></i><i class="cards"><b></b><b></b><b></b></i></div></div><div><b>iPhone 16</b><span>393 × 852</span></div></div>
+          <div class="dev" style="--w:744;--h:1133;--r:14"><div class="shape"><div class="wf"><i class="nav"></i><i class="h"></i><i class="l1"></i><i class="l2"></i><i class="btn"></i><i class="cards"><b></b><b></b><b></b></i></div></div><div><b>iPad mini</b><span>744 × 1133</span></div></div>
+          <div class="dev wide" style="--w:1440;--h:900;--r:8"><div class="shape"><div class="wf"><i class="nav"></i><i class="h"></i><i class="l1"></i><i class="l2"></i><i class="btn"></i><i class="cards"><b></b><b></b><b></b></i></div></div><div><b>Laptop</b><span>1440 × 900</span></div></div>
+        </div>
+        <div class="ruler" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="plans">
+      <div class="wrap">
+        <div class="band-head">
+          <h2>Free covers every tool. Pro raises the limits.</h2>
+          <p class="lead">Nothing is locked behind a door. The free plan gives you a working amount of each tool.</p>
+        </div>
+        <div class="plans2">
+          <div class="plan-card">
+            <h3>Free</h3>
+            <p class="sub">Every tool, a working amount of each.</p>
+            <ul>
+              <li>Video clips up to <b>30 seconds</b></li>
+              <li><b>3</b> devices in the gallery</li>
+              <li><b>5</b> page colors listed</li>
+              <li><b>3</b> CSS variables listed</li>
+              <li>Copy as <b>CSS</b></li>
+            </ul>
+          </div>
+          <div class="plan-card pro">
+            <h3>Pro</h3>
+            <p class="sub">The same tools with the limits raised.</p>
+            <ul>
+              <li>Video clips up to <b>5 minutes</b></li>
+              <li><b>More</b> devices in the gallery</li>
+              <li><b>More</b> page colors and CSS variables</li>
+              <li>Copy as <b>CSS, Tailwind, SVG and JSON</b></li>
+            </ul>
+          </div>
+        </div>
+        <p class="plan-note">You can choose a plan from Options, then Account, in the extension. Signing in is optional and syncs your settings across browsers.</p>
+      </div>
+    </section>
+
+    <section class="band" id="privacy">
+      <div class="wrap">
+        <div class="band-head">
+          <h2>Your pages stay on your device.</h2>
+          <p class="lead">Picky reads the page you're on to do its job, and that analysis never leaves your browser.</p>
+        </div>
+        <div class="bento">
+          <div class="tile tile-diagram">
+            <svg viewBox="0 0 560 320" role="img" aria-label="Diagram. Inside your browser, Picky analyses the page and it stays there. Only if you start it, three things reach a server: a bug report, settings sync, and a share link.">
+              <defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 8 4 0 8z" fill="#b02346"/></marker></defs>
+              <rect class="dg-browser" x="12" y="24" width="270" height="272" rx="22"/>
+              <path class="dg-line" d="M12 62H282"/>
+              <circle class="dg-dot" cx="34" cy="43" r="4"/><circle class="dg-dot" cx="48" cy="43" r="4"/><circle class="dg-dot" cx="62" cy="43" r="4"/>
+              <rect class="dg-bar-ink" x="36" y="86" width="150" height="12" rx="6"/>
+              <rect class="dg-bar" x="36" y="110" width="210" height="8" rx="4"/>
+              <rect class="dg-bar" x="36" y="128" width="170" height="8" rx="4"/>
+              <rect class="dg-btn" x="36" y="150" width="96" height="30" rx="15"/>
+              <path class="dg-lock-s" d="M138 222v-7a9 9 0 0 1 18 0v7"/>
+              <rect class="dg-lock-r" x="132" y="222" width="30" height="22" rx="5"/>
+              <text class="dg-t" x="147" y="276" text-anchor="middle">Analysis stays here</text>
+              <text class="dg-cap" x="469" y="18" text-anchor="middle">only when you start it</text>
+              <path class="dg-path" d="M282 160C335 160 335 67 386 67"/>
+              <path class="dg-path" d="M282 160H386"/>
+              <path class="dg-path" d="M282 160C335 160 335 253 386 253"/>
+              <rect class="dg-node" x="390" y="40" width="158" height="54" rx="16"/>
+              <text class="dg-n1" x="406" y="62">Bug report</text><text class="dg-n2" x="406" y="80">when you press Send</text>
+              <rect class="dg-node" x="390" y="133" width="158" height="54" rx="16"/>
+              <text class="dg-n1" x="406" y="155">Settings sync</text><text class="dg-n2" x="406" y="173">when you sign in</text>
+              <rect class="dg-node" x="390" y="226" width="158" height="54" rx="16"/>
+              <text class="dg-n1" x="406" y="248">Share link</text><text class="dg-n2" x="406" y="266">when you press Share</text>
+            </svg>
+          </div>
+          <div class="tile green"><span class="num">0</span><p>analytics, trackers or telemetry. Not even anonymous ones.</p></div>
+          <div class="tile"><span class="num">3</span><p>things that ever contact a server, and you start every one.</p></div>
+          <div class="tile wide rose"><span class="num">30</span><p>days until a shared screenshot link expires. Picky asks before it uploads, because it can't take a link back sooner.</p></div>
+        </div>
+        <p class="plan-note"><a href="privacy.html">Read the full privacy policy</a></p>
+      </div>
+    </section>
+
+    <section class="band install" id="install">
+      <div class="wrap">
+        <div class="install-panel">
+        <div>
+          <h2>Add Picky to your browser.</h2>
+          <p class="lead">It works in Microsoft Edge and Google Chrome.</p>
+          <div class="install-actions">
+            <a class="btn btn-primary" href="#install" data-store="edge">Add to Edge</a>
+            <a class="btn btn-quiet" href="#install" data-store="chrome">Add to Chrome</a>
+          </div>
+          <p class="install-note">Picky can't run on browser pages like the new-tab page or the store itself. Try it on any normal website.</p>
+        </div>
+        <ol class="install-steps">
+          <li><span>Install Picky and pin it from the puzzle-piece menu.</span></li>
+          <li><span>Open any website and click the Picky icon, or press <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>.</span></li>
+          <li><span>Press <kbd>M</kbd>, <kbd>R</kbd>, <kbd>C</kbd>, <kbd>S</kbd> or <kbd>V</kbd> to pick a tool.</span></li>
+        </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="assets/icon-128.png" alt="" width="24" height="24" />Picky</a>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:mtayyabbaig26@gmail.com">Contact</a>
+      </div>
+      <p class="copy">© <span id="year">2026</span> Picky. Page analysis happens in your browser.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

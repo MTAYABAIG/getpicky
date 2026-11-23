@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Picky</title>
+  <meta name="description" content="Picky's privacy policy: what the extension does with your data, when it contacts a server, and why each permission is needed." />
+  <link rel="icon" type="image/png" href="assets/icon-32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="assets/icon-128.png" alt="" width="28" height="28" />Picky</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html#tools" class="hide-sm">Tools</a>
+        <a href="index.html#plans" class="hide-sm">Free and Pro</a>
+        <a href="support.html">Support</a>
+        <a class="btn btn-primary" href="index.html#install">Add to browser</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Privacy Policy</h1>
+        <p>What Picky does with your data, in plain words.</p>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="article">
+        <p class="updated">Last updated: November 18, 2026</p>
+
+        <div class="callout">
+          <p><strong>Picky works in your own browser and does not sell or share your data.</strong> It contacts a server in only three cases, all started by you: when you send a bug report, when you sign in to sync your settings, and when you press "Share" on a screenshot. There are no analytics, no tracking and no telemetry.</p>
+        </div>
+
+        <h2>Data we collect</h2>
+        <p><strong>Nothing, unless you choose to send a bug report, sign in, or press "Share" on a screenshot.</strong></p>
+
+        <h3>Bug reports (only if you send one)</h3>
+        <p>When you press "Send report" in Picky's "Report a bug" form, Picky sends: your description, your email address if you typed one, Picky's version, the tool you were using, your browser and operating system, and a random install ID (not linked to you) used only to limit spam. <strong>Only if you tick the boxes</strong>, it also sends a screenshot and the address of the page you were on (without its query string or hash). Reports are stored in the developer's Supabase project and emailed to the developer. Screenshots are deleted automatically after 30 days; reports are deleted after at most a year (reports marked fixed or closed, after 90 days).</p>
+
+        <h3>Account and sync (only if you sign in)</h3>
+        <p>If you sign in (with Google or an emailed code), Picky stores your email address (and, with Google, the name and picture on your Google profile) and a copy of your settings and remembered choices (toolbar tools, theme, colours, device options) in the developer's Supabase project so they follow you across browsers. It never stores the contents of the pages you visit. "Delete my cloud data" removes your saved settings; your sign-in record (email) stays until you ask for it to be deleted by emailing the address below. The developer can see, in a private admin page, each account's email address, how it signed in (Google or email), when it joined and last signed in, and any plan assigned to it. Nothing about the pages you visit is stored or visible.</p>
+
+        <h3>Share links (only if you press "Share")</h3>
+        <p>In the screenshot editor, "Share" turns the screenshot you are looking at (with your annotations and crop) into a link you can send to someone. <strong>No account is needed.</strong> Only after you read the notice and press "Upload", Picky sends that one image to Picky's server, together with the random install ID Picky keeps on your browser (the same one used for bug reports), and nothing else (not the page address, title or any other page data). The server passes the image on to the image host zpic (zpic.org); it also uses your network address, only as a one-way hash it cannot turn back into the address, to limit how many links one person can make per day. The image is stored by the host, in the account Picky uses there, not on Picky's own servers. <strong>Anyone who has the link can see the image</strong>, and Picky cannot take a link back before it expires after 30 days. Picky keeps only small daily counters for the limits (counts per install, per hashed address and overall, deleted after a day or two); it keeps no copy of the image and no list of your links. The host has its own terms and privacy policy.</p>
+
+        <h2>Data processed locally on your device</h2>
+        <p>To provide its features, Picky reads content from the web page you are actively viewing, for example pixel colors, element sizes and positions, and screenshots you capture. This processing happens entirely within your browser and the results are never uploaded, except an image you choose to share with "Share" (see above).</p>
+        <p>The following information is saved using your browser's local storage so your preferences and results persist between sessions:</p>
+        <ul>
+          <li>Theme preference (light or dark)</li>
+          <li>Saved toolbar and panel positions per website</li>
+          <li>Measurement and color-pick history</li>
+          <li>Custom and selected responsive-preview devices</li>
+          <li>A temporary screenshot used by the side-by-side compare view</li>
+        </ul>
+        <p>This data stays on your device unless you sign in, in which case your settings are also synced as described above. You can clear the local copy at any time by removing the extension or clearing its storage.</p>
+
+        <h2>Permissions</h2>
+        <ul>
+          <li><strong>storage</strong>: to save your settings and inspection results locally, as described above.</li>
+          <li><strong>scripting</strong>: to inject Picky's own inspection overlay into the current tab when you click the toolbar button or use the keyboard shortcut.</li>
+          <li><strong>declarativeNetRequest</strong>: used only by the Responsive Preview feature to remove page-framing response headers (<code>X-Frame-Options</code>, <code>Content-Security-Policy</code>) so a site can be displayed inside Picky's device-frame preview. This applies to the preview frame only and is active only while the preview is open.</li>
+          <li><strong>alarms</strong>: a 15-minute timer that checks for settings changes from your other browsers. It does nothing unless you are signed in.</li>
+          <li><strong>identity</strong>: to open Google's sign-in window when you choose "Continue with Google".</li>
+          <li><strong>host access (<code>&lt;all_urls&gt;</code>)</strong>: so the inspection tools work on whatever page you choose to use them on. Picky only runs on a tab when you explicitly activate it.</li>
+        </ul>
+
+        <h2>Remote code</h2>
+        <p>Picky does not load or execute any remote code. All scripts run by the extension are bundled inside the extension package.</p>
+
+        <h2>Children's privacy</h2>
+        <p>Picky does not knowingly collect data from children. Bug reports, sign-in and share links are optional and started by you.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If this policy changes, the updated version will be posted at this URL with a new "Last updated" date.</p>
+
+        <h2>Contact</h2>
+        <p>For questions about this policy, contact <a href="mailto:mtayyabbaig26@gmail.com?subject=Picky%20privacy">mtayyabbaig26@gmail.com</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="assets/icon-128.png" alt="" width="24" height="24" />Picky</a>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:mtayyabbaig26@gmail.com">Contact</a>
+      </div>
+      <p class="copy">© <span id="year">2026</span> Picky. Page analysis happens in your browser.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
